@@ -56,6 +56,26 @@ body {
   align-items: center;
 }
 
+/* .items.icon-envelope::before {
+  content: "";
+  background-image: url(../svg/envelope.svg);
+  display: inline-flex;
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  align-self: center;
+} */
+
+/* /* .icon-smartphone::before {
+  content: "";
+  background-image: url(../svg/smartphone.svg);
+  display: inline-flex;
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  align-self: center; 
+}*/
+
 .logo-nav {
   display: flex;
   align-items: center;
@@ -64,6 +84,7 @@ body {
 .header-contact {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 
 .header-contact .items + .items {
@@ -131,6 +152,49 @@ span {
   color: var(--accent-text-color);
 }
 
+.icon-envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.icon-smartphone {
+  width: 10px;
+  height: 16px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.icon-envelope:hover,
+.icon-envelope:focus,
+.icon-smartphone:hover,
+.icon-smartphone:focus {
+  fill: var(--accent-text-color);
+
+  cursor: pointer;
+}
+
+.icon-antenna,
+.icon-clock,
+.icon-diagram,
+.icon-astronaut {
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.decor-icon {
+  width: 270px;
+  height: 120px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
 /* hero */
 
 .section {
@@ -155,10 +219,23 @@ span {
 }
 
 .hero {
-  background-color: var(--footer-background-color);
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-color: var(--footer-background-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-Img.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .button {
@@ -192,6 +269,19 @@ span {
   text-align: center;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .main-features {
   display: flex;
 }
@@ -205,8 +295,34 @@ span {
   margin-right: 0;
 }
 
+/* .main-features .items::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-antenna::before {
+  background-image: url(../svg/antenna\ 1.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../svg/clock\ 1.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../svg/diagram\ 1.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../svg/astronaut\ 1.svg);
+} */
+
 .features-title {
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -247,7 +363,7 @@ span {
 
 .team-list .function {
   margin-top: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 
   color: var(--secondary-text-color);
 }
@@ -270,11 +386,87 @@ span {
 
   text-align: center;
   width: 270px;
+  height: 428px;
   background-color: #ffffff;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-list .cards:last-child {
   margin-right: 0;
+}
+
+.sosials-links {
+  display: flex;
+  width: 206px;
+  height: 44px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.social-icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  margin-right: 10px;
+  padding: 12px;
+
+  color: #afb1b8;
+}
+
+.social-icon:last-child {
+  margin-right: 0px;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  background-color: var(--accent-text-color);
+  border-radius: 50%;
+  color: var(--accent-white-color);
+}
+
+.icon-instagram,
+.icon-twitter,
+.icon-facebook,
+.icon-linkedin {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Постоянные клиенты */
+
+.clients-data {
+  display: block;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding: 16px 32px;
+
+  color: #afb1b8;
+}
+
+.clients-data:hover,
+.clients-data:focus {
+  border-color: var(--accent-text-color);
+  color: var(--accent-text-color);
+
+  cursor: pointer;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.client-logo {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
 }
 
 /* Подвал */
@@ -324,6 +516,44 @@ span {
 .address-post:hover,
 .address-post:focus {
   color: var(--accent-text-color);
+}
+
+.footer-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--accent-white-color);
+}
+
+.footer-links {
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+}
+
+.footer-list {
+  display: flex;
+}
+
+.footer-links .social-icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  margin-right: 10px;
+  padding: 12px;
+  border-radius: 50%;
+
+  color: var(--accent-white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-links .social-icon:hover,
+.footer-links .social-icon:focus {
+  background-color: var(--accent-text-color);
 }
 
 /* Портфолио */
@@ -435,6 +665,11 @@ span {
 
 .portfolio-cards .data {
   border-top: transparent;
+}
+
+.portfolio-cards:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-image {
